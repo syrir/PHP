@@ -7,6 +7,7 @@ $db_name="logowanie"; // Database name
 $tbl_name="uzytkownicy"; // Table name
 
 // Connect to server and select databse.
+error_reporting(E_ERROR | E_PARSE);
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 

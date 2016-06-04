@@ -9,7 +9,7 @@ $login=$_SESSION['login'];
 $id=$_POST['var'];
 $tm=$_POST['temat'];
 $txt=$_POST['txt'];
-
+error_reporting(E_ERROR | E_PARSE);
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 $query = "UPDATE $tbl_name SET temat='$tm',notatka='$txt' where id_notatki='$id'";

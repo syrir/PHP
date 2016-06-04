@@ -14,6 +14,7 @@ $password="mat"; // Mysql password
 $db_name="logowanie"; // Database name
 $tbl_name="n1"; // Table name
 $login=$_SESSION['login'];
+error_reporting(E_ERROR | E_PARSE);
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 //<input type=\"button\" value=\"Dodaj\" id=\"addbutton\" onclick=\"header(\"Location:logout.php\");\"
